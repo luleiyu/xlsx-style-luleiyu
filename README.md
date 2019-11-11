@@ -29,8 +29,8 @@ Supported write formats:
 - CSV (and general DSV)
 - JSON and JS objects (various styles)
 
-
 Source: <https://github.com/luleiyu/xlsx-style-luleiyu>
+
 DEMO: <https://github.com/luleiyu/xlsx-style-demo>
 
 ## Installation
@@ -46,6 +46,23 @@ npm install xlsx-style-luleiyu --save
 
 ## Optional Modules
 
+```javascript
+// 如果你使用的jszip的版本是2.0的版本，那就把我这个，包里最外层的xlsx.js的write_zip_type这个方法替换成下面的这个。你也可以发个npm的包哦
+function write_zip_type(wb, opts) {
+	var o = opts||{};
+  style_builder  = new StyleBuilder(opts);
+
+  var z = write_zip(wb, o);
+	switch(o.type) {
+		case "base64": return z.generate({type:"base64"});
+		case "binary": return z.generate({type:"string"});
+		case "buffer": return z.generate({type:"nodebuffer"});
+		case "file": return _fs.writeFileSync(o.file, z.generate({type:"nodebuffer"}));
+		default: throw new Error("Unrecognized type " + o.type);
+	}
+}
+
+```
 The node version automatically requires modules for additional features.  Some
 of these modules are rather large in size and are only needed in special
 circumstances, so they do not ship with the core.  For browser use, they must
