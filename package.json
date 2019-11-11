@@ -25,7 +25,7 @@
 		"xlsjs":"",
 		"uglify-js":""
 	},
-	"repository": { "type":"git", "url":"git://github.com/luleiyu/js-xlsx.git#beta" },
+	"repository": { "type":"git", "url":"https://github.com/luleiyu/xlsx-style-luleiyu" },
 	"scripts": {
 		"pretest": "git submodule init && git submodule update",
 		"test": "make test"
@@ -35,7 +35,7 @@
 			"pattern": "xlsx.js"
 		}
 	},
-	"bugs": { "url": "https://github.com/luleiyu/js-xlsx-luleiyu/issues" },
+	"bugs": { "url": "https://github.com/luleiyu/xlsx-style-luleiyu/issues" },
 	"license": "Apache-2.0",
 	"engines": { "node": ">=0.8" }
 }
