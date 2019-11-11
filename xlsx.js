@@ -11815,7 +11815,6 @@ function readFileSync(data, opts) {
 function write_zip_type(wb, opts) {
 	var o = opts||{};
   style_builder  = new StyleBuilder(opts);
-  console.log(o,o.type)
   var z = write_zip(wb, o);
 	switch(o.type) {
 		case "base64": return z.generateAsync({type:"base64"}).then(res => {
