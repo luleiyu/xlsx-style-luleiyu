@@ -31,6 +31,7 @@ Supported write formats:
 
 
 Source: <https://github.com/luleiyu/xlsx-style-luleiyu>
+DEMO: <https://github.com/luleiyu/xlsx-style-demo>
 
 ## Installation
 
@@ -39,6 +40,9 @@ With [npm](https://www.npmjs.com/package/xlsx-style-luleiyu):
 ```sh
 npm install xlsx-style-luleiyu --save
 ```
+
+## 需要引用的文件地址（最好是按文件夹复制哦，把这个地址里的，vendor和utils两个文件夹都复制走，用法在这个demo的compoents里）
+地址: <https://github.com/luleiyu/xlsx-style-demo/tree/master/src>
 
 ## Optional Modules
 
